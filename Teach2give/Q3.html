@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+</head>
+<body>
+    <!--
+        Write a program that takes an integer as input and returns true if the input is a power of two.
+    -->
+    <h4>
+        Write a program that takes an integer as input and returns true if the input is a power of two.
+        <br><br>
+        Examples:
+        <br><br>
+        8=> returns true
+        <br>
+        6=> returns false
+    </h4>
+    <p>~Using Javascript~</p>
+
+    <script>
+        function isPowerOfTwo(n) {
+            // Check if n is greater than zero and has only one bit set
+            return n > 0 && (n & (n - 1)) === 0;
+        }
+
+        // Testing
+        let num = prompt("Enter a number:")
+        document.writeln('You entered '+ num + ' which is ' + isPowerOfTwo(num)); // Output: true
+    </script>
+</body>
+</html>

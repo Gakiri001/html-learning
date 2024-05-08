@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+</head>
+<body>
+    <!--Write a program that accepts a string as input, capitalizes the first letter of each word in the
+    string, and then returns the result string.
+    Examples:
+    "hi"=> returns "Hi"
+    "i love programming"=> returns "I Love Programming"
+    -->
+    <h4>
+        Write a program that accepts a string as input, capitalizes the first letter of each word in the
+        string, and then returns the result string.
+        <br><br>
+        Examples:
+        <br>
+        "hi"=> returns "Hi"
+        <br>
+        "i love programming"=> returns "I Love Programming"
+    </h4>
+    <p>~Javascript~</p>
+    <script>
+    function capitalize(str) {
+        //Capitalise the First character and return the string
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+
+    let a_string = prompt('Enter a string');
+    let capitalizedString = capitalize(a_string);
+    document.writeln(capitalizedString);
+    </script>
+</body>
+</html>

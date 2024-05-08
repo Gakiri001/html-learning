@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    <!--Write a program to generate the Fibonacci sequence up to 100-->
+    <h4>Write a program to generate the Fibonacci sequence up to 100.</h4>
+
+    <h5>Explanation of Fibonacci sequence</h5>
+    <p>The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding
+        ones, usually starting with 0 and 1.
+    </p>
+    <p>~Using Javascript answer below:~</p>
+
+    <script>
+        // Initialize variables to store the first two numbers in the sequence
+        let firstNum = 0;
+        let secondNum = 1;
+
+        // Print the first two numbers
+        document.writeln(firstNum);
+        document.writeln(secondNum);
+
+        // Generate the Fibonacci sequence up to 100
+        while (true) {
+            // Calculate the next number in the sequence
+            let nextNum = firstNum + secondNum;
+            
+            // Check if the next number exceeds 100
+            if (nextNum > 100) {
+                break; // Exit the loop if the next number is greater than 100
+            }
+            
+            // Print the next number
+            document.writeln(nextNum);
+            
+            // Update the values of firstNum and secondNum for the next iteration
+            firstNum = secondNum;
+            secondNum = nextNum;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+</head>
+<body>
+    <!--Write a program that counts the number of vowels in a sentence. <br>
+        eg " Hello World " => returns 2-->
+    <h4>
+        Write a program that counts the number of vowels in a sentence. <br>
+        eg " Hello World " => returns 2
+    </h4>
+    <p>~Javascript~</p>
+
+    <script>
+        function countVowels(sentence) {
+            // Uniformity -> all to lower case
+            sentence = sentence.toLowerCase();
+            
+            // Define an array containing all vowels
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+            
+            // Initialize a variable to store the count of vowels
+            let vowelCount = 0;
+            
+            // Iterate through each character in the sentence
+            for (let char of sentence) {
+                // Check if the character is a vowel
+                if (vowels.includes(char)) {
+                    vowelCount++;
+                }
+            }
+            
+            // Return the count of vowels
+            return vowelCount;
+        }
+
+        // Testing
+        let sentence = prompt("Enter a sentence");
+        document.writeln('Number of vowels -> ' + countVowels(sentence));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+</head>
+<body>
+    <!--Write a program that takes an integer as input and returns an integer with reversed digit
+    ordering.
+    Examples:
+    For input 500, the program should return 5.
+    For input -56, the program should return -65.
+    For input -90, the program should return -9.
+    For input 91, the program should return 19.
+    -->
+    <h4>
+        Write a program that takes an integer as input and returns an integer with reversed digit ordering.
+        <br><br>
+        Examples: <br>
+        For input 500, the program should return 5. <br>
+        For input -56, the program should return -65. <br>
+        For input -90, the program should return -9. <br>
+        For input 91, the program should return 19. <br>
+    </h4>
+    <p>~Javascript~</p>
+    <script>
+        function reverseInteger(num) {
+            // Convert the number to a string
+            let numStr = num.toString();
+            
+            // Check if the number is (-)
+            let isNegative = num < 0;
+            
+            // Reverse the string (excluding the negative sign if present)
+            let reversedStr = isNegative ? '-' + numStr.slice(1).split('').reverse().join('') : numStr.split('').reverse().join('');
+            
+            // Convertion
+            let reversedNum = parseInt(reversedStr);
+            
+            // Return the number after reversing
+            return reversedNum;
+        }
+
+        // Testing
+        let integer = prompt("Input the integer")
+        document.writeln('Number Entered-> '+integer + ' reversed to -> '+reverseInteger(integer))
+
+    </script>
+</body>
+</html>
